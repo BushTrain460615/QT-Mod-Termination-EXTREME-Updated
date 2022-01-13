@@ -52,10 +52,6 @@ class TitleState extends MusicBeatState
 	{
 		FlxGraphic.defaultPersist = true; //Alright, somebody in the community said this will help with caching... Hopefuly it doesn't break anything.
 		//Note to self though, this will break "destroyOnNotUse" so remember to disable persist on any graphics you want to destroy when not being used.
-
-		#if polymod
-		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
-		#end
 		
 		#if sys
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
